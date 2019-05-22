@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" th:href="@{/css/icomoon.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/flexslider.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div id="cool-style-page">
+    <div th:replace="header.html"></div>
+    <div id="cool-style-main">
+        <div class="cool-style-narrow-content">
+            <div class="row row-bottom-padded-md">
+                <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                    <img class="img-responsive" th:src="@{'data:image/jpeg;base64,'+${imageMap.get(yourpost.getId())}}">
+                </div>
+                <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
+                    <h2 class="cool-style-heading" th:text="${yourpost.getTitle()}"></h2>
+                    <p style="color: black" th:text="${yourpost.getMessage()}"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="js/jquery.waypoints.min.js"></script>
+<!-- Flexslider -->
+<script src="js/jquery.flexslider-min.js"></script>
+
+
+<!-- MAIN JS -->
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/animate.css}">
+	<link rel="stylesheet" th:href="@{/css/icomoon.css}">
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+	<link rel="stylesheet" th:href="@{/css/flexslider.css}">
+	<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+	<div id="cool-style-page">
+		<div th:replace="header.html"></div>
+		<div id="cool-style-main">
+			<div class="cool-style-narrow-content">
+				<h2 class="cool-style-heading animate-box" data-animate-effect="fadeInLeft">Read Our Blog</h2>
+				<div class="row row-bottom-padded-md">
+					<th:block th:each="item : ${datalist}">
+						<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="#" class="blog-img"><img class="img-responsive" th:src="@{'data:image/jpeg;base64,'+${imageMap.get(item.getId())}}"></a>
+								<div class="desc">
+									<h3 th:text="${item.getTitle()}"></h3>
+									<span><small th:text="${item.getName()}"></small> / <small th:text="${#temporals.format(item.getTime(), 'dd-MM-yyyy HH:mm')}"></small></span>
+									<form th:action="@{/fullpost}" method="get">
+										<input type="hidden" name="id" id="id" th:value="${item.getId()}"/>
+										<button type="submit" >Read more</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</th:block>
+				</div>
+				<div class="form-group" sec:authorize="isFullyAuthenticated()">
+					<a style="position:fixed;bottom:5px;right:5px;margin:0;padding:5px 3px;" th:href="@{new}" ><button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Add post</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+
+
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+
