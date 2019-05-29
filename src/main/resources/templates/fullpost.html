@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-md-8 animate-box" data-animate-effect="fadeInLeft">
                     <h2 class="cool-style-heading" th:text="${yourpost.getTitle()}"></h2>
-                    <p style="color: black" th:text="${yourpost.getMessage()}"></p>
+                    <span class="blacktext"><p  th:utext="${yourpost.getMessage()}"></p></span>
                 </div>
             </div>
 

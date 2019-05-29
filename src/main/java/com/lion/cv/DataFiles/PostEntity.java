@@ -25,6 +25,7 @@ public class PostEntity {
     String name;
 
     @NotNull
+    @Column(length = 10485760)
     String message;
 
     @NotNull

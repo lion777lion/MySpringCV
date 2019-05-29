@@ -12,11 +12,7 @@ public class MainController {
         return ("index");
     }
 
-    @GetMapping
-    @RequestMapping("portfolio")
-    public String Portfolio(){
-        return ("portfolio");
-    }
+
 
     @GetMapping
     @RequestMapping("contact")

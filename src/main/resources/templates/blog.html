@@ -21,13 +21,13 @@
 					<th:block th:each="item : ${datalist}">
 						<div class="col-md-3 col-sm-6 col-padding animate-box" data-animate-effect="fadeInLeft">
 							<div class="blog-entry">
-								<a href="#" class="blog-img"><img class="img-responsive" th:src="@{'data:image/jpeg;base64,'+${imageMap.get(item.getId())}}"></a>
+								<span class="blog-img"><img class="img-responsive" th:src="@{'data:image/jpeg;base64,'+${imageMap.get(item.getId())}}"></span>
 								<div class="desc">
 									<h3 th:text="${item.getTitle()}"></h3>
 									<span><small th:text="${item.getName()}"></small> / <small th:text="${#temporals.format(item.getTime(), 'dd-MM-yyyy HH:mm')}"></small></span>
 									<form th:action="@{/fullpost}" method="get">
 										<input type="hidden" name="id" id="id" th:value="${item.getId()}"/>
-										<button type="submit" >Read more</button>
+										<button type="submit" class="btn btn-primary btn-lg btn-block login-btn">Read more</button>
 									</form>
 								</div>
 							</div>

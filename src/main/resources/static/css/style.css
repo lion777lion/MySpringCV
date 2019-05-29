@@ -41,8 +41,7 @@ p {
   margin-bottom: 1.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: #000;
+h1, h2, h3, h4, h5, h6, h7{
   font-family: "Roboto", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0;
@@ -508,7 +507,6 @@ body.offcanvas #cool-style-main, body.offcanvas .cool-style-nav-toggle {
   line-height: auto;
 }
 .blog-entry .desc h3 a {
-  color: #000;
   text-decoration: none;
 }
 .blog-entry .desc span {
@@ -764,7 +762,7 @@ body.offcanvas #cool-style-main, body.offcanvas .cool-style-nav-toggle {
 }
 
 .cool-style-more-contact {
-  background: #fafafa;
+  background: #fff9ea;
 }
 
 .cool-style-feature {
@@ -811,7 +809,6 @@ body.offcanvas #cool-style-main, body.offcanvas .cool-style-nav-toggle {
 .cool-style-feature .cool-style-text h3 {
   font-weight: 500;
   margin-bottom: 20px;
-  color: rgba(0, 0, 0, 0.8);
   font-size: 14px;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -1167,4 +1164,26 @@ body.offcanvas #cool-style-main, body.offcanvas .cool-style-nav-toggle {
 /*# sourceMappingURL=style.css.map */
 body {
   background-color: rgba(175, 105, 59, 0.07);
+}
+
+.icon-small {
+  height: 40px;
+  width: 40px;
+  margin-top: 30%;
+}
+
+.free-100 {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.username  {
+  color: #1b6d85;
+  padding-bottom: 50px;
+}
+
+.blacktext {
+  color: black;
+  font-family: Georgia, Times, serif;
+  font-style: italic;
 }
